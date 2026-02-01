@@ -13,7 +13,7 @@ dependencies = [
     "flatbuffers>=24.3.25",
     "flax==0.10.2",
     "fsspec[gcs]>=2024.6.0",
-    "gym-aloha>=0.1.1",
+    # "gym-aloha>=0.1.1",
     "imageio>=2.36.1",
     "jax[cuda12]==0.5.3",
     "jaxtyping==0.2.36",
@@ -38,6 +38,7 @@ dependencies = [
     "rich>=14.0.0",
     "polars>=1.30.0",
     "h5py>=3.10.0",  # For RECAP HDF5 data storage
+    "accelerate>=1.12.0",
 ]
 
 
@@ -61,7 +62,11 @@ rlds = [
 ]
 
 [tool.uv]
-override-dependencies = ["ml-dtypes==0.4.1", "tensorstore==0.1.74"]
+override-dependencies = [
+  "ml-dtypes==0.4.1",
+  "tensorstore==0.1.74",
+  "av==12.3.0",
+]
 
 [tool.uv.sources]
 openpi-client = { workspace = true }
